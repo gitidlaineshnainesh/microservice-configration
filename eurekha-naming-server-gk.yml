@@ -12,15 +12,15 @@ spring:
 server:
   port: 8761
 
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-#    service-url:
-#      defaultZone: http://10.10.181.76:8761/eureka
-#  instance:
-#    hostname: eurekha-naming-server-gk
-#    prefer-ip-address: false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://10.10.181.76:8761/eureka
+  instance:
+    hostname: eurekha-naming-server-gk
+    prefer-ip-address: false
 #10.0.75.1
 logging:
   level:

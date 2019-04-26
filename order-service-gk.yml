@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: order-service-gk
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://10.10.181.76:9411/
+
+server:
+  port: 4040
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.181.76:8761/eureka
+  instance:
+    prefer-ip-address: false
+    hostname: order-service-gk
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: debug

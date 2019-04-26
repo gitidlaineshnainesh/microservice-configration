@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: user-service-gk
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://10.10.181.76:9411/
+    
+server:
+  port: 1010
+eureka:
+  client:
+    service-url:
+      #default-zone: http://169.254.143.146:8761/eureka
+      defaultZone: http://10.10.181.76:8761/eureka
+  instance:
+    hostname: user-service-gk
+    prefer-ip-address: false
+      
+#eureka.client.service-url.default-zone=http://10.0.75.1:8761/eureka
+turbine:
+  aggregator:
+    clusterConfig: user-service-gk
+  appConfig: user-service-gk
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: debug

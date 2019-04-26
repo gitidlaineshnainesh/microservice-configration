@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: eurekha-naming-server-gk
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    #base-url: http://169.254.143.146:9411/
+    base-url: http://10.10.181.76:9411/
+
+
+server:
+  port: 8761
+
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: http://10.10.181.76:8761/eureka
+#  instance:
+#    hostname: eurekha-naming-server-gk
+#    prefer-ip-address: false
+#10.0.75.1
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: debug

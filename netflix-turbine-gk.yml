@@ -1,0 +1,36 @@
+server:
+  port: 7070
+  
+spring:
+  application:
+    name: netflix-turbine-gk
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://10.10.181.76:9411/
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: debug
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.181.76:8761/eureka
+  instance:
+    hostname: netflix-turbine-gk
+    prefer-ip-address: false
+      
+turbine:
+  clusterNameExpression: new String("default")
+  appConfig: user-service-gk, product-service-gk, cart-service-gk, order-service-gk
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: zull-api-getway-server-gk
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://10.10.181.76:9411/
+
+server:
+  port: 5050
+
+eureka:
+  client:
+    service-url:
+      #default-zone: http://169.254.143.146:8761/eureka
+      defaultZone: http://10.10.181.76:8761/eureka
+  instance:
+    prefer-ip-address: false
+    hostname: zull-api-getway-server-gk
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: debug

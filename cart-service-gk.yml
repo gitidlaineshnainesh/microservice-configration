@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cart-service-gk
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://10.10.181.76:9411/
+
+server:
+  port: 3030
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.181.76:8761/eureka
+  instance:
+    hostname: cart-service-gk
+    prefer-ip-address: false
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: debug

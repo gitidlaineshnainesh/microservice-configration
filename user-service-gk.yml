@@ -10,7 +10,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://10.10.181.76:9411/
+    base-url: http://192.168.43.73:9411/
     
 server:
   port: 1010
@@ -18,7 +18,7 @@ eureka:
   client:
     service-url:
       #default-zone: http://169.254.143.146:8761/eureka
-      defaultZone: http://10.10.181.76:8761/eureka
+      defaultZone: http://192.168.43.73:8761/eureka
   instance:
     hostname: user-service-gk
     prefer-ip-address: false

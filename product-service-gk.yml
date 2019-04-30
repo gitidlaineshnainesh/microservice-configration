@@ -11,6 +11,12 @@ spring:
       percentage: 1.0
   zipkin:
     base-url: http://10.10.181.7:9411/
+  rabbitmq:
+    host: 10.10.181.7
+    port: 5672
+    username: guest
+    password: guest
+
 
 server:
   port: 2020

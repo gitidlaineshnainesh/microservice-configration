@@ -8,7 +8,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://10.10.181.7:9411/
+    base-url: http://10.10.181.44:9411/
 
 logging:
   level:
@@ -20,7 +20,7 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://10.10.181.7:8761/eureka
+      defaultZone: http://10.10.181.44:8761/eureka
   instance:
     hostname: netflix-turbine-gk
     prefer-ip-address: false

@@ -10,9 +10,9 @@ spring:
     sampler:
       percentage: 1.0
   zipkin:
-    base-url: http://10.10.181.44:9411/
+    base-url: http://34.194.217.116:9411/
   rabbitmq:
-    host: 10.10.181.44
+    host: 34.194.217.116
     port: 5672
     username: rabbitmq_user
     password: rabbitmq_user
@@ -25,7 +25,7 @@ eureka:
   client:
     service-url:
       #default-zone: http://169.254.143.146:8761/eureka
-      defaultZone: http://10.10.181.44:8761/eureka
+      defaultZone: http://34.194.217.116:8761/eureka
   instance:
     hostname: product-service-gk
     prefer-ip-address: false

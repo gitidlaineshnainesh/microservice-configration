@@ -14,8 +14,8 @@ spring:
   rabbitmq:
     host: 10.10.181.44
     port: 5672
-    username: guest
-    password: guest
+    username: rabbitmq_user
+    password: rabbitmq_user
 
 server:
   port: 4040

@@ -14,8 +14,8 @@ spring:
   rabbitmq:
     host: 34.194.217.116
     port: 5672
-    username: rabbitmq_user
-    password: rabbitmq_user
+    username: amqpuser
+    password: p@ssw0rd123
 
 server:
   port: 4040

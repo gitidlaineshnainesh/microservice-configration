@@ -5,7 +5,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://34.194.217.116:9411/
+    base-url: http://34.237.212.57:9411/
 
 server:
   port: 5050
@@ -14,7 +14,7 @@ eureka:
   client:
     service-url:
       #default-zone: http://169.254.143.146:8761/eureka
-      defaultZone: http://34.194.217.116:8761/eureka
+      defaultZone: http://34.237.212.57:8761/eureka
   instance:
     prefer-ip-address: false
     hostname: zull-api-getway-server-gk

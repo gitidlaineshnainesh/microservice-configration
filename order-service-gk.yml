@@ -23,7 +23,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://34.233.195.223:8761/eureka
+      defaultZone: http://34.237.212.57:8761/eureka
   instance:
     prefer-ip-address: false
     hostname: order-service-gk

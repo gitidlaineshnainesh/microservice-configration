@@ -12,7 +12,7 @@ spring:
   zipkin:
     base-url: http://34.237.212.57:9411/
   rabbitmq:
-    host: 34.194.217.116
+    host: 34.233.195.223
     port: 5672
     username: amqpuser
     password: p@ssw0rd123
